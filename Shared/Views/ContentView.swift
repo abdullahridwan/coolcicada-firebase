@@ -17,7 +17,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TodaysWorkoutView()
+        WorkoutList()
             .fullScreenCover(isPresented: $sessionStore.isAnon, content: {
                 Login()
             })

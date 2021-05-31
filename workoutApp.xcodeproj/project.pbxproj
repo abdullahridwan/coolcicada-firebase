@@ -16,6 +16,8 @@
 		B5B2802F26642861006846C6 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2802D26642861006846C6 /* Styles.swift */; };
 		B5B2803126642E71006846C6 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2803026642E71006846C6 /* WorkoutViewModel.swift */; };
 		B5B2803226642E71006846C6 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2803026642E71006846C6 /* WorkoutViewModel.swift */; };
+		B5B28034266472CB006846C6 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B28033266472CB006846C6 /* WorkoutList.swift */; };
+		B5B28035266472CB006846C6 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B28033266472CB006846C6 /* WorkoutList.swift */; };
 		B5C2D8B82662D4A500200C9A /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D8B72662D4A500200C9A /* Tests_iOS.swift */; };
 		B5C2D8C32662D4A600200C9A /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D8C22662D4A600200C9A /* Tests_macOS.swift */; };
 		B5C2D8C52662D4A600200C9A /* workoutAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D89C2662D4A100200C9A /* workoutAppApp.swift */; };
@@ -56,6 +58,7 @@
 		B5B2802A2663F9F9006846C6 /* TodaysWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysWorkoutView.swift; sourceTree = "<group>"; };
 		B5B2802D26642861006846C6 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		B5B2803026642E71006846C6 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
+		B5B28033266472CB006846C6 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
 		B5C2D89C2662D4A100200C9A /* workoutAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutAppApp.swift; sourceTree = "<group>"; };
 		B5C2D89D2662D4A100200C9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5C2D89E2662D4A500200C9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				B5C2D8DE2662D63500200C9A /* Login.swift */,
 				B5B2802A2663F9F9006846C6 /* TodaysWorkoutView.swift */,
 				B5B2803026642E71006846C6 /* WorkoutViewModel.swift */,
+				B5B28033266472CB006846C6 /* WorkoutList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,6 +455,7 @@
 				B5B2803126642E71006846C6 /* WorkoutViewModel.swift in Sources */,
 				B5B2802B2663F9F9006846C6 /* TodaysWorkoutView.swift in Sources */,
 				B5C2D8DF2662D63500200C9A /* Login.swift in Sources */,
+				B5B28034266472CB006846C6 /* WorkoutList.swift in Sources */,
 				B5C2D8C72662D4A600200C9A /* ContentView.swift in Sources */,
 				B5B2802E26642861006846C6 /* Styles.swift in Sources */,
 				B55655C626634C510070DCA3 /* SessionStore.swift in Sources */,
@@ -462,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B28035266472CB006846C6 /* WorkoutList.swift in Sources */,
 				B5B2802C2663F9F9006846C6 /* TodaysWorkoutView.swift in Sources */,
 				B5B2802F26642861006846C6 /* Styles.swift in Sources */,
 				B5C2D8E02662D63500200C9A /* Login.swift in Sources */,
