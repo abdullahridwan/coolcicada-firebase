@@ -12,8 +12,6 @@ struct ContentView: View {
     
     init(){
         sessionStore.listen()
-        print(sessionStore.isAnon)
-        print(sessionStore.$currentUser)
     }
     
     var body: some View {

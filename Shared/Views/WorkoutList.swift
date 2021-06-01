@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct WorkoutList: View {
-    @ObservedObject var wvm = WorkoutViewModel()
+    @ObservedObject var workoutViewModel = WorkoutViewModel()
     
     init(){
-        wvm.fetchData()
-        print("data has been fetched...")
+        workoutViewModel.fetchData()
+        print("[WorkoutList.swift] Data Fetched...")
     }
-    
-    
     var body: some View {
+        //Text("hello")
         NavigationView{
             List{
-                ForEach(wvm.allUserInfo){userInfo in
-                    ForEach(userInfo.all_workouts){workout in
-                        VStack{
-                            Text(workout.name)
+                ForEach(workoutViewModel.allWorkouts){work in
+                    HStack{
+                        Image(systemName: "flame")
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(Color.red.opacity(0.7))
+                        VStack(alignment: .leading){
+                            Text(work.name).font(.title)
+                            Text("Sets: \(String(work.sets))").font(.title2)
+                            Text("Reps: \(String(work.reps))").font(.title2)
+                            Text(work.date, style: .date).font(.title3)
                         }
+                        Spacer()
                     }
                 }
-            }.navigationTitle("AllWorkouts")
+            }.navigationTitle("Past Workouts")
         }
     }
 }
