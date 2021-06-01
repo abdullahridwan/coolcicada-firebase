@@ -15,10 +15,25 @@ struct ContentView: View {
     }
     
     var body: some View {
-        WorkoutList()
-            .fullScreenCover(isPresented: $sessionStore.isAnon, content: {
-                Login()
-            })
+        TabView{
+            WorkoutList()
+                .fullScreenCover(isPresented: $sessionStore.isAnon, content: {
+                    Login()
+                })
+                .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("Dock")
+                }
+            
+            
+            Text("Hello")
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("History")
+                }
+            
+            
+        }
     }
 }
 

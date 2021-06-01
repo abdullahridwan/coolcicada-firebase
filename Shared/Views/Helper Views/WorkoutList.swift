@@ -15,11 +15,12 @@ struct WorkoutList: View {
         print("[WorkoutList.swift] Data Fetched...")
     }
     var body: some View {
-        //Text("hello")
+        let all_workouts = workoutViewModel.allWorkouts
         NavigationView{
             List{
-                ForEach(workoutViewModel.allWorkouts){work in
-                    HStack{
+                ForEach(all_workouts){historical_workout in
+                    OneWorkout(workout: historical_workout)
+                    /*HStack{
                         Image(systemName: "flame")
                             .frame(width: 30, height: 30)
                             .foregroundColor(Color.red.opacity(0.7))
@@ -30,7 +31,7 @@ struct WorkoutList: View {
                             Text(work.date, style: .date).font(.title3)
                         }
                         Spacer()
-                    }
+                    }*/
                 }
             }.navigationTitle("Past Workouts")
         }
