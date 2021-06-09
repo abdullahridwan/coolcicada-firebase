@@ -74,6 +74,28 @@ class WorkoutViewModel: ObservableObject {
             print("[WorkoutViewModel.swift] No User")
         }
     }
+    
+    
+    
+    func logWorkout(todaysWorkouts : [Workout]){
+        if(user != nil){
+            db.collection("users").whereField("userID", isEqualTo: user!.uid).getDocuments(){
+                (snapshot, error) in
+                if let error = error {
+                    print("[WorkoutViewModel.swift] There was an error logging the workout in [logWorkout] \(error)")
+                }else{
+                    for document in snapshot!.documents{
+                        self.db.collection("user").document(document.documentID)
+                            .updateData(["all_workouts" : FieldValue.arrayUnion([todaysWorkouts])])
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    
 }
 
 

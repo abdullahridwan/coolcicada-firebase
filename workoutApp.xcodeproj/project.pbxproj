@@ -31,12 +31,13 @@
 		B5C2D8DB2662D53900200C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D8D92662D53900200C9A /* GoogleService-Info.plist */; };
 		B5C2D8DF2662D63500200C9A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D8DE2662D63500200C9A /* Login.swift */; };
 		B5C2D8E02662D63500200C9A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D8DE2662D63500200C9A /* Login.swift */; };
+		B5D2708626681E39009B9DBB /* BasePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2708526681E39009B9DBB /* BasePlan.swift */; };
+		B5D2708926684545009B9DBB /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2708826684545009B9DBB /* HelperFunctions.swift */; };
+		B5D2708C2668457D009B9DBB /* TodaysList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2708B2668457D009B9DBB /* TodaysList.swift */; };
 		B5FB52EF2666ABFB00DA14A5 /* OneWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB52EE2666ABFB00DA14A5 /* OneWorkout.swift */; };
 		B5FB52F02666ABFB00DA14A5 /* OneWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB52EE2666ABFB00DA14A5 /* OneWorkout.swift */; };
 		B5FB52F22666AC1D00DA14A5 /* TappableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB52F12666AC1D00DA14A5 /* TappableCircle.swift */; };
 		B5FB52F32666AC1D00DA14A5 /* TappableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB52F12666AC1D00DA14A5 /* TappableCircle.swift */; };
-		B5FB52F52666B29F00DA14A5 /* CalendarHeatMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB52F42666B29F00DA14A5 /* CalendarHeatMapTest.swift */; };
-		B5FB52F62666B29F00DA14A5 /* CalendarHeatMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB52F42666B29F00DA14A5 /* CalendarHeatMapTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,9 +84,11 @@
 		B5C2D8C42662D4A600200C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C2D8D92662D53900200C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5C2D8DE2662D63500200C9A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B5D2708526681E39009B9DBB /* BasePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePlan.swift; sourceTree = "<group>"; };
+		B5D2708826684545009B9DBB /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		B5D2708B2668457D009B9DBB /* TodaysList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysList.swift; sourceTree = "<group>"; };
 		B5FB52EE2666ABFB00DA14A5 /* OneWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWorkout.swift; sourceTree = "<group>"; };
 		B5FB52F12666AC1D00DA14A5 /* TappableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableCircle.swift; sourceTree = "<group>"; };
-		B5FB52F42666B29F00DA14A5 /* CalendarHeatMapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeatMapTest.swift; sourceTree = "<group>"; };
 		C4B4EF750A1B08D3FD745E54 /* Pods-workoutApp (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workoutApp (macOS).debug.xcconfig"; path = "Target Support Files/Pods-workoutApp (macOS)/Pods-workoutApp (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		E402F0F9FA1625D0667A9BF8 /* Pods-workoutApp (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workoutApp (iOS).release.xcconfig"; path = "Target Support Files/Pods-workoutApp (iOS)/Pods-workoutApp (iOS).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,7 +223,8 @@
 		B5C2D8DC2662D61700200C9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5FB52F72666B2A600DA14A5 /* Test Views */,
+				B5D2708426681DBC009B9DBB /* Historical Workouts */,
+				B5D2708326681DB4009B9DBB /* Todays Workouts */,
 				B5FB52EA2666AB2C00DA14A5 /* Helper Views */,
 				B5FB52E92666AB2300DA14A5 /* MainViews */,
 				B5C2D89D2662D4A100200C9A /* ContentView.swift */,
@@ -238,6 +242,24 @@
 				B54C27062665383700384922 /* TestInfo */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		B5D2708326681DB4009B9DBB /* Todays Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2708526681E39009B9DBB /* BasePlan.swift */,
+				B5D2708826684545009B9DBB /* HelperFunctions.swift */,
+				B5D2708B2668457D009B9DBB /* TodaysList.swift */,
+			);
+			path = "Todays Workouts";
+			sourceTree = "<group>";
+		};
+		B5D2708426681DBC009B9DBB /* Historical Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				B5B28033266472CB006846C6 /* WorkoutList.swift */,
+			);
+			path = "Historical Workouts";
 			sourceTree = "<group>";
 		};
 		B5FB52E22665D22F00DA14A5 /* ViewModels */ = {
@@ -260,17 +282,8 @@
 			children = (
 				B5FB52EE2666ABFB00DA14A5 /* OneWorkout.swift */,
 				B5FB52F12666AC1D00DA14A5 /* TappableCircle.swift */,
-				B5B28033266472CB006846C6 /* WorkoutList.swift */,
 			);
 			path = "Helper Views";
-			sourceTree = "<group>";
-		};
-		B5FB52F72666B2A600DA14A5 /* Test Views */ = {
-			isa = PBXGroup;
-			children = (
-				B5FB52F42666B29F00DA14A5 /* CalendarHeatMapTest.swift */,
-			);
-			path = "Test Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,13 +516,15 @@
 				B5B2803126642E71006846C6 /* WorkoutViewModel.swift in Sources */,
 				B5B2802B2663F9F9006846C6 /* TodaysWorkoutView.swift in Sources */,
 				B5C2D8DF2662D63500200C9A /* Login.swift in Sources */,
-				B5FB52F52666B29F00DA14A5 /* CalendarHeatMapTest.swift in Sources */,
 				B5FB52EF2666ABFB00DA14A5 /* OneWorkout.swift in Sources */,
+				B5D2708626681E39009B9DBB /* BasePlan.swift in Sources */,
+				B5D2708926684545009B9DBB /* HelperFunctions.swift in Sources */,
 				B5FB52F22666AC1D00DA14A5 /* TappableCircle.swift in Sources */,
 				B5B28034266472CB006846C6 /* WorkoutList.swift in Sources */,
 				B5C2D8C72662D4A600200C9A /* ContentView.swift in Sources */,
 				B5B2802E26642861006846C6 /* Styles.swift in Sources */,
 				B55655C626634C510070DCA3 /* SessionStore.swift in Sources */,
+				B5D2708C2668457D009B9DBB /* TodaysList.swift in Sources */,
 				B5C2D8C52662D4A600200C9A /* workoutAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +539,6 @@
 				B5B2802F26642861006846C6 /* Styles.swift in Sources */,
 				B5FB52F32666AC1D00DA14A5 /* TappableCircle.swift in Sources */,
 				B5C2D8E02662D63500200C9A /* Login.swift in Sources */,
-				B5FB52F62666B29F00DA14A5 /* CalendarHeatMapTest.swift in Sources */,
 				B5C2D8C82662D4A600200C9A /* ContentView.swift in Sources */,
 				B5B2803226642E71006846C6 /* WorkoutViewModel.swift in Sources */,
 				B5C2D8C62662D4A600200C9A /* workoutAppApp.swift in Sources */,
