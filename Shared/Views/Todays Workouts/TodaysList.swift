@@ -12,6 +12,9 @@ struct TodaysList: View {
     
     //get data. Since local view depends on this arr, we make it state
     @State var allWorkoutsInst : [String: [Workout]]
+    @State private var editMode = EditMode.inactive
+    //@State private var items: [Item] = []
+    private static var count = 0
     
     var body: some View {
         let todaysDate = instanceOfHelper.getTodayWeekDay()
@@ -26,7 +29,9 @@ struct TodaysList: View {
                     .onMove(perform: move)
                 }
                 .navigationTitle("Workouts For Today")
-                .toolbar(content: {EditButton()})
+                .navigationBarItems(leading: EditButton(), trailing: addButton)
+                .environment(\.editMode, $editMode)
+            
                 Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Text("Button")
@@ -36,12 +41,30 @@ struct TodaysList: View {
         }
     }
     
+    private var addButton: some View {
+        switch editMode {
+        case .inactive:
+            return AnyView(Button(action: onAdd) { Image(systemName: "plus") })
+        default:
+            return AnyView(EmptyView())
+        }
+    }
+    
+    func onAdd(){
+        //alide up form. fill out fields. adds in workout. 
+        //allWorkoutsInst.append()
+        print("Adding Workout")
+    }
+    
     func delete(at offsets: IndexSet){
         allWorkoutsInst[instanceOfHelper.getTodayWeekDay()]?.remove(atOffsets: offsets)
     }
     func move(from source: IndexSet, to destination: Int) {
         allWorkoutsInst[instanceOfHelper.getTodayWeekDay()]?.move(fromOffsets: source, toOffset: destination)
     }
+    
+    
+    
 }
 
 struct TodaysList_Previews: PreviewProvider {
