@@ -8,21 +8,17 @@
 import SwiftUI
 
 struct TodaysList: View {
-    let instanceOfHelper = HelperFunctions()
-    
-    //get data. Since local view depends on this arr, we make it state
-    @State var allWorkoutsInst : [String: [Workout]]
+    @Binding var workoutsForToday: [Workout]
     @State private var editMode = EditMode.inactive
-    //@State private var items: [Item] = []
     private static var count = 0
     
     var body: some View {
-        let todaysDate = instanceOfHelper.getTodayWeekDay()
-        let workoutsForToday = allWorkoutsInst[todaysDate]
+        //let todaysDate = instanceOfHelper.getTodayWeekDay()
+        //workoutsForToday = allWorkoutsInst[todaysDate]!
         
         NavigationView{
                 List{
-                    ForEach(workoutsForToday!){workoutItem in
+                    ForEach(workoutsForToday){workoutItem in
                         OneWorkout(workout: workoutItem, setsDone: 0)
                     }
                     .onDelete(perform: delete)
@@ -57,18 +53,20 @@ struct TodaysList: View {
     }
     
     func delete(at offsets: IndexSet){
-        allWorkoutsInst[instanceOfHelper.getTodayWeekDay()]?.remove(atOffsets: offsets)
+        workoutsForToday.remove(atOffsets: offsets)
     }
     func move(from source: IndexSet, to destination: Int) {
-        allWorkoutsInst[instanceOfHelper.getTodayWeekDay()]?.move(fromOffsets: source, toOffset: destination)
+        workoutsForToday.move(fromOffsets: source, toOffset: destination)
     }
-    
-    
-    
 }
 
+
+
+
+
 struct TodaysList_Previews: PreviewProvider {
+    //@State static var workoutsForTodayPreview = allWorkouts["Monday"]
     static var previews: some View {
-        TodaysList(allWorkoutsInst: allWorkouts)
+        TodaysList(workoutsForToday: .constant(allWorkouts["Tuesday"]!))
     }
 }
